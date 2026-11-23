@@ -27,4 +27,4 @@ A local server is required because the app loads data with fetch().
 - compare.html: side-by-side comparison
 
 ## GitHub
-https://github.com/your-username/your-repo
+https://github.com/faridaemaad/laptop_finder_farida
