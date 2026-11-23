@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laptops - Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css" />
+  <script src="src/js/theme-init.js"></script>
+</head>
+<body class="flex min-h-screen flex-col">
+  <header id="site-header" class="border-b border-line bg-card"></header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 p-4">
+    <h1 class="text-2xl font-bold">Laptop catalogue</h1>
+
+<section class="mt-4 flex flex-col gap-3 md:flex-row md:flex-wrap">
+  <input id="search" type="search" placeholder="Search by name or brand" class="form-control md:flex-1" />
+  <select id="category" class="form-control md:w-44">
+    <option value="all">All categories</option>
+    <option value="ultrabook">Ultrabook</option>
+    <option value="gaming">Gaming</option>
+    <option value="2-in-1">2-in-1</option>
+    <option value="creator">Creator</option>
+    <option value="budget">Budget</option>
+  </select>
+  <input id="max-price" type="number" min="0" placeholder="Max price" class="form-control md:w-40" />
+  <select id="min-ram" class="form-control md:w-40">
+    <option value="0">Any RAM</option>
+    <option value="8">8 GB+</option>
+    <option value="16">16 GB+</option>
+    <option value="32">32 GB+</option>
+  </select>
+  <select id="sort" class="form-control md:w-52">
+    <option value="none">Sort by</option>
+    <option value="price-asc">Price: low to high</option>
+    <option value="price-desc">Price: high to low</option>
+    <option value="battery-desc">Battery: longest first</option>
+    <option value="battery-asc">Battery: shortest first</option>
+    <option value="weight-asc">Weight: lightest first</option>
+    <option value="weight-desc">Weight: heaviest first</option>
+  </select>
+</section>
+
+<p id="count" class="mt-4 text-sm text-muted"></p>
+<section id="grid" class="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"></section>
+  </main>
+
+  <footer class="border-t border-line p-4 text-center text-sm text-muted">
+    Student Laptop Finder - SW302 Assignment 2
+  </footer>
+
+  <script type="module" src="src/js/laptops.js"></script>
+</body>
+</html>

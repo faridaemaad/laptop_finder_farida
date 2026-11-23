@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+@theme {
+  --color-surface: #f4f7f4;
+  --color-card: #ffffff;
+  --color-ink: #14231a;
+  --color-muted: #4b5f52;
+  --color-line: #d3dfd6;
+  --color-accent: #15803d;
+  --color-accent-hover: #166534;
+  --color-on-accent: #ffffff;
+  --color-best: #dcfce7;
+}
+[data-theme="performance"] {
+  --color-surface: #0f1115;
+  --color-card: #1a1d24;
+  --color-ink: #f3f4f6;
+  --color-muted: #9ca3af;
+  --color-line: #2c313b;
+  --color-accent: #f97316;
+  --color-accent-hover: #ea580c;
+  --color-on-accent: #111111;
+  --color-best: #4a2a0c;
+}
+@layer base {
+  body {
+    @apply bg-surface text-ink;
+  }
+}
+@layer components {
+  .laptop-card {
+    @apply flex flex-col rounded-xl border border-line bg-card p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg focus-within:ring-2 focus-within:ring-accent;
+  }
+  .btn-action {
+    @apply rounded-lg bg-accent px-4 py-2 font-semibold text-on-accent transition hover:bg-accent-hover focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+  .form-control {
+    @apply w-full rounded-lg border-line bg-card text-ink;
+  }
+}

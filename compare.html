@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>compare - Student Laptop Finder</title>
+  <link rel="stylesheet" href="dist/output.css" />
+  <script src="src/js/theme-init.js"></script>
+</head>
+<body class="flex min-h-screen flex-col">
+  <header id="site-header" class="border-b border-line bg-card"></header>
+
+  <main class="mx-auto w-full max-w-6xl flex-1 p-4">
+     <h1 class="text-2xl font-bold">Compare laptops</h1>
+<p class="mt-2 text-sm text-muted">Pick 2 to 4 laptops from your favorites.</p>
+<p id="compare-msg" class="mt-2 text-sm font-bold text-accent"></p>
+<section id="picker" class="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"></section>
+<section id="table-wrap" class="mt-6 overflow-x-auto rounded-xl border border-line bg-card"></section>
+  </main>
+
+  <footer class="border-t border-line p-4 text-center text-sm text-muted">
+    Student Laptop Finder - SW302 Assignment 2
+  </footer>
+
+<script type="module" src="src/js/compare-page.js"></script>
+</body>
+</html>
